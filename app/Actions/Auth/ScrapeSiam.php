@@ -32,7 +32,8 @@ class ScrapeSiam {
 
         if (isset($cek[0])) {
             $response = [
-                'message' => 'NIM atau password salah'
+                'message' => 'error',
+                'data' => 'NIM atau password salah'
             ];
         } else {
             $data = $cr->filter('div[class="bio-info"] > div')->each(function ($result) {
